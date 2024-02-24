@@ -8,6 +8,7 @@ import re
 from collections import namedtuple
 import tkinter as tk
 from tkinter import filedialog
+import datetime
 
 def export_folder_path():
     """Prompt the user to select a folder to save the export"""
