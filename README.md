@@ -48,7 +48,7 @@ You can modify the regular expressions in the main function to match the specifi
 You can adjust the output filename format by changing the code in the export_folder_path function.
 Dependencies:
 
-This script requires the following Python libraries:
+This script requires the following Python libraries/Modules:
 
 - numpy
 - pandas
@@ -58,6 +58,7 @@ This script requires the following Python libraries:
 - pdfplumber
 - collections
 - tkinter
+- datetime
 
 # Contributing:
 
