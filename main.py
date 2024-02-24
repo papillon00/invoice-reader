@@ -43,6 +43,13 @@ def get_folder_path():
     import_list = [ i for i in glob.glob('*.{}'.format(extension), recursive=True)]
     print(f"There are {len(import_list)} invoices in {folder_path}")
     return import_list
+
+def find_match(text_for_search, re_pattern):
+    match = re.search(re_pattern, text_for_search)
+    if match:
+        return match.group(1)
+    else:
+        return None
     
 def main(import_list):
     
@@ -112,7 +119,6 @@ def main(import_list):
         inv_no = find_match(text_for_search, inv_line_re)
         stmt_date = find_match(text_for_search, Stmt_date_re)
         customer =  find_match(text_for_search, cust_no_re)
-        subtotal = find_match(text_for_search, subtotal_re)
         grand_total = find_match(text_for_search, grand_total_re)
         Tax = find_match(text_for_search, Tax_re)
 
